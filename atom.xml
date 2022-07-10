@@ -6,7 +6,7 @@
   <link href="https://rickg.cn/atom.xml" rel="self"/>
   
   <link href="https://rickg.cn/"/>
-  <updated>2022-06-03T13:51:28.449Z</updated>
+  <updated>2022-07-10T08:47:58.931Z</updated>
   <id>https://rickg.cn/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>E5SubBot的配置使用</title>
+    <link href="https://rickg.cn/2022/07/10/configure-e5sub-bot/"/>
+    <id>https://rickg.cn/2022/07/10/configure-e5sub-bot/</id>
+    <published>2022-07-10T08:11:38.000Z</published>
+    <updated>2022-07-10T08:47:58.931Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在拥有Office E5订阅后，如何续期成了一个大问题。最近找到了一个GitHub项目：<a href="https://github.com/iyear/E5SubBot">iyear&#x2F;E5SubBot</a>，决定用它来续期E5。</p><h2 id="Requirements"><a href="#Requirements" class="headerlink" title="Requirements"></a>Requirements</h2><ul><li>1 * VPS（要能访问Telegram）</li><li>1 * Office E5账号</li><li>1 * Telegram账号</li></ul><h2 id="申请Telegram机器人"><a href="#申请Telegram机器人" class="headerlink" title="申请Telegram机器人"></a>申请Telegram机器人</h2><p>添加@BotFather机器人，输入<code>/start </code>开始</p><p><img src="https://fastly.jsdelivr.net/gh/rickgcn/cdn-assets/img/image-20220710162212450.png" alt="image-20220710162212450"></p><p>输入<code>/newbot</code>创建新机器人</p><p><img src="https://fastly.jsdelivr.net/gh/rickgcn/cdn-assets/img/image-20220710162320105.png" alt="image-20220710162320105"></p><p>输入bot名字</p><p><img src="https://fastly.jsdelivr.net/gh/rickgcn/cdn-assets/img/image-20220710162345391.png" alt="image-20220710162345391"></p><p>输入bot用户名，得到bot的Token</p><p><img src="https://fastly.jsdelivr.net/gh/rickgcn/cdn-assets/img/image-20220710162516659.png" alt="image-20220710162516659"></p><h2 id="配置E5SubBot"><a href="#配置E5SubBot" class="headerlink" title="配置E5SubBot"></a>配置E5SubBot</h2><p>在 <a href="https://github.com/iyear/E5SubBot/releases">Releases</a> 页面下载对应系统的二进制文件，上传至服务器</p><p>重命名<code>config.yml.example</code>为<code>config.yml</code></p><p>编辑<code>config.yml</code>，将<code>bot_token</code>一项的值修改为刚刚获取的Token</p><p>前往<a href="https://t.me/userinfobot%E8%8E%B7%E5%8F%96%E8%87%AA%E5%B7%B1%E7%9A%84tgid%EF%BC%8C%E5%B9%B6%E5%A1%AB%E5%85%A5%60admin%60%E9%A1%B9%E4%B8%AD">https://t.me/userinfobot获取自己的tgid，并填入`admin`项中</a></p><h2 id="启动E5SubBot"><a href="#启动E5SubBot" class="headerlink" title="启动E5SubBot"></a>启动E5SubBot</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">screen -S e5sub</span><br><span class="line">chmod +x E5SubBot</span><br><span class="line">./E5SubBot</span><br><span class="line">(Ctrl A+D)</span><br></pre></td></tr></table></figure><h2 id="绑定账号"><a href="#绑定账号" class="headerlink" title="绑定账号"></a>绑定账号</h2><p>参照以下教程（图片来自网络）</p><p><img src="https://fastly.jsdelivr.net/gh/rickgcn/cdn-assets/img/E5Sub_1.jpg" alt="E5Sub_1"></p><p><img src="https://fastly.jsdelivr.net/gh/rickgcn/cdn-assets/img/E5Sub_2.jpg" alt="E5Sub_2"></p><p><img src="https://fastly.jsdelivr.net/gh/rickgcn/cdn-assets/img/E5Sub_3.jpg" alt="E5Sub_3"></p><p><img src="https://fastly.jsdelivr.net/gh/rickgcn/cdn-assets/img/E5Sub_4.jpg" alt="E5Sub_4"></p><p><img src="https://fastly.jsdelivr.net/gh/rickgcn/cdn-assets/img/E5Sub_5.jpg" alt="E5Sub_5"></p><p><img src="https://fastly.jsdelivr.net/gh/rickgcn/cdn-assets/img/E5Sub_6.jpg" alt="E5Sub_6"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;在拥有Office E5订阅后，如何续期成了一个大问题。最近找到了一个GitHub项目：&lt;a href=&quot;https://github.co</summary>
+      
+    
+    
+    
+    
+    <category term="Office E5" scheme="https://rickg.cn/tags/Office-E5/"/>
+    
+  </entry>
   
   <entry>
     <title>记一次给PVE配置ddns</title>
