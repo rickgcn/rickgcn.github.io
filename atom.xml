@@ -6,7 +6,7 @@
   <link href="https://rickg.cn/atom.xml" rel="self"/>
   
   <link href="https://rickg.cn/"/>
-  <updated>2022-07-14T09:23:43.502Z</updated>
+  <updated>2022-08-07T10:11:33.730Z</updated>
   <id>https://rickg.cn/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>为比特彗星开放IPv6端口</title>
+    <link href="https://rickg.cn/2022/08/07/bitcomet-ipv6-green-light/"/>
+    <id>https://rickg.cn/2022/08/07/bitcomet-ipv6-green-light/</id>
+    <published>2022-08-07T10:09:45.000Z</published>
+    <updated>2022-08-07T10:11:33.730Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ip6tables -A FORWARD -p tcp --dport [BitComet端口] -j ACCEPT</span><br><span class="line">ip6tables -A FORWARD -p udp --dport [BitComet端口] -j ACCEPT</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;</summary>
+      
+    
+    
+    
+    
+    <category term="bitcomet" scheme="https://rickg.cn/tags/bitcomet/"/>
+    
+  </entry>
   
   <entry>
     <title>E5SubBot的配置使用</title>
