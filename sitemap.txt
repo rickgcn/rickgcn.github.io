@@ -1,3 +1,4 @@
+https://rickg.cn/2022/08/10/openwrt-config-ipv6-firewall/
 https://rickg.cn/2022/08/07/bitcomet-ipv6-green-light/
 https://rickg.cn/2022/07/10/configure-e5sub-bot/
 https://rickg.cn/photos/index.html

@@ -6,7 +6,7 @@
   <link href="https://rickg.cn/atom.xml" rel="self"/>
   
   <link href="https://rickg.cn/"/>
-  <updated>2022-08-07T10:11:33.730Z</updated>
+  <updated>2022-08-10T09:51:36.637Z</updated>
   <id>https://rickg.cn/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>设置OpenWrt的防火墙，从外网访问内网服务</title>
+    <link href="https://rickg.cn/2022/08/10/openwrt-config-ipv6-firewall/"/>
+    <id>https://rickg.cn/2022/08/10/openwrt-config-ipv6-firewall/</id>
+    <published>2022-08-10T09:50:51.000Z</published>
+    <updated>2022-08-10T09:51:36.637Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在运营商提供IPv6后，家中每一个内网设备都会拥有IPv6地址。</p><p>但是发现内网的设备，虽然有公网IPv6地址，但是仅仅能ping通，无法从外网访问。</p><p>最后发现是OpenWrt的防火墙阻断了连接，于是决定通过设置OpenWrt防火墙来开放端口。</p><h2 id="设置"><a href="#设置" class="headerlink" title="设置"></a>设置</h2><p>打开OpenWrt管理界面，点击<code>网络</code> → <code>防火墙</code> → <code>通信规则</code></p><p>点击<code>添加与编辑</code>：</p><p><img src="https://fastly.jsdelivr.net/gh/rickgcn/cdn-assets/img/image-20220810174525648.png" alt="image-20220810174525648"></p><p>按图编辑：</p><p><img src="https://fastly.jsdelivr.net/gh/rickgcn/cdn-assets/img/image-20220810174827165.png" alt="image-20220810174827165"></p><p>保存后，外网设备可以正常访问了</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;在运营商提供IPv6后，家中每一个内网设备都会拥有IPv6地址。&lt;/p&gt;
+&lt;p&gt;但是发现内网的设备，虽然有公网IPv6地址，但是仅仅能pin</summary>
+      
+    
+    
+    
+    
+    <category term="openwrt" scheme="https://rickg.cn/tags/openwrt/"/>
+    
+  </entry>
   
   <entry>
     <title>为比特彗星开放IPv6端口</title>
