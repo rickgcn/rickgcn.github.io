@@ -1,3 +1,4 @@
+https://rickg.cn/2022/11/25/arma3-get-and-analyze-missile-data/
 https://rickg.cn/2022/08/10/openwrt-config-ipv6-firewall/
 https://rickg.cn/2022/08/07/bitcomet-ipv6-green-light/
 https://rickg.cn/2022/07/10/configure-e5sub-bot/
@@ -24,3 +25,5 @@ https://rickg.cn/tags/%E7%BE%8E%E5%8C%96/
 https://rickg.cn/tags/pve/
 https://rickg.cn/tags/ddns/
 https://rickg.cn/tags/%E8%BD%AF%E8%B7%AF%E7%94%B1/
+https://rickg.cn/tags/arma3/
+https://rickg.cn/tags/sqf/
