@@ -1,3 +1,4 @@
+https://rickg.cn/2023/02/14/nas-from-entry-to-boom-1/
 https://rickg.cn/2022/11/25/arma3-get-and-analyze-missile-data/
 https://rickg.cn/about/index.html
 https://rickg.cn/2022/08/10/openwrt-config-ipv6-firewall/
@@ -27,3 +28,5 @@ https://rickg.cn/tags/ddns/
 https://rickg.cn/tags/%E8%BD%AF%E8%B7%AF%E7%94%B1/
 https://rickg.cn/tags/arma3/
 https://rickg.cn/tags/sqf/
+https://rickg.cn/tags/nas/
+https://rickg.cn/tags/pve%EF%BC%8Cdocker/
