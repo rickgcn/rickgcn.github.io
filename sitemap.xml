@@ -2,9 +2,72 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://rickg.cn/2022/05/25/pve-openwrt/</loc>
+    
+    <lastmod>2023-02-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://rickg.cn/2022/06/01/pve-configure-ddns/</loc>
+    
+    <lastmod>2023-02-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://rickg.cn/2022/05/28/powershell-polish/</loc>
+    
+    <lastmod>2023-02-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://rickg.cn/2023/02/14/nas-from-entry-to-boom-1/</loc>
     
-    <lastmod>2023-02-14</lastmod>
+    <lastmod>2023-02-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://rickg.cn/2022/08/10/openwrt-config-ipv6-firewall/</loc>
+    
+    <lastmod>2023-02-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://rickg.cn/2022/05/28/deploy-snapdrop/</loc>
+    
+    <lastmod>2023-02-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://rickg.cn/2022/07/10/configure-e5sub-bot/</loc>
+    
+    <lastmod>2023-02-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://rickg.cn/2022/05/29/cloudreve/</loc>
+    
+    <lastmod>2023-02-15</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -13,7 +76,7 @@
   <url>
     <loc>https://rickg.cn/2022/11/25/arma3-get-and-analyze-missile-data/</loc>
     
-    <lastmod>2022-11-25</lastmod>
+    <lastmod>2023-02-15</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -29,15 +92,6 @@
   </url>
   
   <url>
-    <loc>https://rickg.cn/2022/08/10/openwrt-config-ipv6-firewall/</loc>
-    
-    <lastmod>2022-08-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://rickg.cn/2022/08/07/bitcomet-ipv6-green-light/</loc>
     
     <lastmod>2022-08-07</lastmod>
@@ -47,63 +101,9 @@
   </url>
   
   <url>
-    <loc>https://rickg.cn/2022/07/10/configure-e5sub-bot/</loc>
-    
-    <lastmod>2022-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://rickg.cn/photos/index.html</loc>
     
     <lastmod>2022-07-13</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://rickg.cn/2022/05/28/powershell-polish/</loc>
-    
-    <lastmod>2022-06-03</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://rickg.cn/2022/05/28/deploy-snapdrop/</loc>
-    
-    <lastmod>2022-06-03</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://rickg.cn/2022/05/29/cloudreve/</loc>
-    
-    <lastmod>2022-06-03</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://rickg.cn/2022/06/01/pve-configure-ddns/</loc>
-    
-    <lastmod>2022-06-03</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://rickg.cn/2022/05/25/pve-openwrt/</loc>
-    
-    <lastmod>2022-06-03</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -139,7 +139,7 @@
 
   <url>
     <loc>https://rickg.cn/</loc>
-    <lastmod>2023-02-14</lastmod>
+    <lastmod>2023-02-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -147,112 +147,112 @@
   
   <url>
     <loc>https://rickg.cn/tags/bitcomet/</loc>
-    <lastmod>2023-02-14</lastmod>
+    <lastmod>2023-02-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://rickg.cn/tags/cloudreve/</loc>
-    <lastmod>2023-02-14</lastmod>
+    <lastmod>2023-02-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://rickg.cn/tags/Office-E5/</loc>
-    <lastmod>2023-02-14</lastmod>
+    <lastmod>2023-02-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://rickg.cn/tags/Snapdrop/</loc>
-    <lastmod>2023-02-14</lastmod>
+    <lastmod>2023-02-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://rickg.cn/tags/frp/</loc>
-    <lastmod>2023-02-14</lastmod>
+    <lastmod>2023-02-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://rickg.cn/tags/%E6%95%99%E7%A8%8B/</loc>
-    <lastmod>2023-02-14</lastmod>
+    <lastmod>2023-02-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://rickg.cn/tags/openwrt/</loc>
-    <lastmod>2023-02-14</lastmod>
+    <lastmod>2023-02-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://rickg.cn/tags/powershell/</loc>
-    <lastmod>2023-02-14</lastmod>
+    <lastmod>2023-02-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://rickg.cn/tags/%E7%BE%8E%E5%8C%96/</loc>
-    <lastmod>2023-02-14</lastmod>
+    <lastmod>2023-02-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://rickg.cn/tags/pve/</loc>
-    <lastmod>2023-02-14</lastmod>
+    <lastmod>2023-02-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://rickg.cn/tags/ddns/</loc>
-    <lastmod>2023-02-14</lastmod>
+    <lastmod>2023-02-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://rickg.cn/tags/%E8%BD%AF%E8%B7%AF%E7%94%B1/</loc>
-    <lastmod>2023-02-14</lastmod>
+    <lastmod>2023-02-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://rickg.cn/tags/arma3/</loc>
-    <lastmod>2023-02-14</lastmod>
+    <lastmod>2023-02-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://rickg.cn/tags/sqf/</loc>
-    <lastmod>2023-02-14</lastmod>
+    <lastmod>2023-02-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://rickg.cn/tags/nas/</loc>
-    <lastmod>2023-02-14</lastmod>
+    <lastmod>2023-02-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://rickg.cn/tags/pve%EF%BC%8Cdocker/</loc>
-    <lastmod>2023-02-14</lastmod>
+    <lastmod>2023-02-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
