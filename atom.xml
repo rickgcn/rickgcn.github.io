@@ -93,7 +93,7 @@
     <link href="https://rickg.cn/2022/08/07/bitcomet-ipv6-green-light/"/>
     <id>https://rickg.cn/2022/08/07/bitcomet-ipv6-green-light/</id>
     <published>2022-08-07T10:09:45.000Z</published>
-    <updated>2022-08-07T10:11:33.730Z</updated>
+    <updated>2023-02-15T00:48:45.382Z</updated>
     
     <content type="html"><![CDATA[<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ip6tables -A FORWARD -p tcp --dport [BitComet端口] -j ACCEPT</span><br><span class="line">ip6tables -A FORWARD -p udp --dport [BitComet端口] -j ACCEPT</span><br></pre></td></tr></table></figure>]]></content>
     
