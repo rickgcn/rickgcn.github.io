@@ -23,12 +23,12 @@
   <title>设置OpenWrt的防火墙，从外网访问内网服务 - Cpl.Kerry</title>
 
   
-    <meta name="description" content="前言在运营商提供IPv6后，家中每一个内网设备都会拥有IPv6地址。 但是发现内网的设备，虽然有公网IPv6地址，但是仅仅能ping通，无法从外网访问。 最后发现是OpenWrt的防火墙阻断了连接，于是决定通过设置OpenWrt防火墙来开放端口。 设置打开OpenWrt管理界面，点击网络 → 防火墙 → 通信规则 点击添加与编辑：  按图编辑：  保存后，外网设备可以正常访问了">
+    <meta name="description" content="前言在运营商提供IPv6后，家中每一个内网设备都会拥有IPv6地址。 但是发现内网的设备，虽然有公网IPv6地址，但是仅仅能ping通，无法从外网访问。 最后发现是OpenWrt的防火墙阻断了连接，于是决定通过设置OpenWrt防火墙来开放端口。 设置打开OpenWrt管理界面，点击网络 → 防火墙 → 通信规则 点击添加与编辑： image-20220810174525648  按图编辑： im">
 <meta property="og:type" content="article">
 <meta property="og:title" content="设置OpenWrt的防火墙，从外网访问内网服务">
 <meta property="og:url" content="https://rickg.cn/2022/08/10/openwrt-config-ipv6-firewall/index.html">
 <meta property="og:site_name" content="Cpl.Kerry">
-<meta property="og:description" content="前言在运营商提供IPv6后，家中每一个内网设备都会拥有IPv6地址。 但是发现内网的设备，虽然有公网IPv6地址，但是仅仅能ping通，无法从外网访问。 最后发现是OpenWrt的防火墙阻断了连接，于是决定通过设置OpenWrt防火墙来开放端口。 设置打开OpenWrt管理界面，点击网络 → 防火墙 → 通信规则 点击添加与编辑：  按图编辑：  保存后，外网设备可以正常访问了">
+<meta property="og:description" content="前言在运营商提供IPv6后，家中每一个内网设备都会拥有IPv6地址。 但是发现内网的设备，虽然有公网IPv6地址，但是仅仅能ping通，无法从外网访问。 最后发现是OpenWrt的防火墙阻断了连接，于是决定通过设置OpenWrt防火墙来开放端口。 设置打开OpenWrt管理界面，点击网络 → 防火墙 → 通信规则 点击添加与编辑： image-20220810174525648  按图编辑： im">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://gcore.jsdelivr.net/gh/rickgcn/cdn-assets/img/image-20220810174525648.png">
 <meta property="og:image" content="https://gcore.jsdelivr.net/gh/rickgcn/cdn-assets/img/image-20220810174827165.png">
@@ -119,9 +119,11 @@
 <p>最后发现是OpenWrt的防火墙阻断了连接，于是决定通过设置OpenWrt防火墙来开放端口。</p>
 <h2 id="设置"><a href="#设置" class="headerlink" title="设置"></a>设置</h2><p>打开OpenWrt管理界面，点击<code>网络</code> → <code>防火墙</code> → <code>通信规则</code></p>
 <p>点击<code>添加与编辑</code>：</p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/rickgcn/cdn-assets/img/image-20220810174525648.png" alt="image-20220810174525648"></p>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/rickgcn/cdn-assets/img/image-20220810174525648.png" alt="image-20220810174525648" fancybox="true"/></div><div class="image-meta"><span class="image-caption center">image-20220810174525648</span></div></div>
+
 <p>按图编辑：</p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/rickgcn/cdn-assets/img/image-20220810174827165.png" alt="image-20220810174827165"></p>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/rickgcn/cdn-assets/img/image-20220810174827165.png" alt="image-20220810174827165" fancybox="true"/></div><div class="image-meta"><span class="image-caption center">image-20220810174827165</span></div></div>
+
 <p>保存后，外网设备可以正常访问了</p>
 
 

@@ -136,7 +136,8 @@
 <figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">proxy_set_header</span> Upgrade <span class="variable">$http_upgrade</span>;</span><br><span class="line"><span class="attribute">proxy_set_header</span> Connection <span class="variable">$connection_upgrade</span>;</span><br></pre></td></tr></table></figure>
 
 <h2 id="CDN配置-（以又拍云为例）"><a href="#CDN配置-（以又拍云为例）" class="headerlink" title="CDN配置 （以又拍云为例）"></a>CDN配置 （以又拍云为例）</h2><p>又拍云控制台创建WebSocket服务，域名填需要绑定的域名，协议http，端口80，如图所示</p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/rickgcn/cdn-assets/img/image-20220528152422766.png" alt="image-20220528152422766"></p>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/rickgcn/cdn-assets/img/image-20220528152422766.png" alt="image-20220528152422766" fancybox="true"/></div><div class="image-meta"><span class="image-caption center">image-20220528152422766</span></div></div>
+
 <p>随后在服务的https配置中添加证书，配置完成</p>
 
 
