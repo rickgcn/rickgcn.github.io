@@ -1,3 +1,4 @@
+https://rickg.cn/notes/index.html
 https://rickg.cn/friends/index.html
 https://rickg.cn/2022/05/25/pve-openwrt/
 https://rickg.cn/2022/06/01/pve-configure-ddns/
@@ -8,7 +9,6 @@ https://rickg.cn/2022/05/28/deploy-snapdrop/
 https://rickg.cn/2022/07/10/configure-e5sub-bot/
 https://rickg.cn/2022/05/29/cloudreve/
 https://rickg.cn/2022/11/25/arma3-get-and-analyze-missile-data/
-https://rickg.cn/notes/index.html
 https://rickg.cn/about/index.html
 https://rickg.cn/2022/08/07/bitcomet-ipv6-green-light/
 https://rickg.cn/2022/05/29/cloudreve-child-node/
