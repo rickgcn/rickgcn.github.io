@@ -1,3 +1,4 @@
+https://rickg.cn/friends/index.html
 https://rickg.cn/2022/05/25/pve-openwrt/
 https://rickg.cn/2022/06/01/pve-configure-ddns/
 https://rickg.cn/2022/05/28/powershell-polish/
@@ -12,7 +13,6 @@ https://rickg.cn/about/index.html
 https://rickg.cn/2022/08/07/bitcomet-ipv6-green-light/
 https://rickg.cn/2022/05/29/cloudreve-child-node/
 https://rickg.cn/2022/05/28/how-to-configure-frp/
-https://rickg.cn/friends/index.html
 https://rickg.cn/
 https://rickg.cn/tags/arma3/
 https://rickg.cn/tags/sqf/
