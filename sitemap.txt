@@ -1,3 +1,4 @@
+https://rickg.cn/2023/02/27/nas-from-entry-to-boom-2/
 https://rickg.cn/2023/02/25/tutorial-cloudflare-zero-trust/
 https://rickg.cn/notes/index.html
 https://rickg.cn/friends/index.html
@@ -33,3 +34,4 @@ https://rickg.cn/tags/ddns/
 https://rickg.cn/tags/%E8%BD%AF%E8%B7%AF%E7%94%B1/
 https://rickg.cn/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/
 https://rickg.cn/tags/Cloudflare/
+https://rickg.cn/tags/jellyfin/
