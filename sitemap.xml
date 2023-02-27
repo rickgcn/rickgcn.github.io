@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://rickg.cn/2023/02/25/tutorial-cloudflare-zero-trust/</loc>
+    
+    <lastmod>2023-02-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://rickg.cn/notes/index.html</loc>
     
     <lastmod>2023-02-18</lastmod>
@@ -139,7 +148,7 @@
 
   <url>
     <loc>https://rickg.cn/</loc>
-    <lastmod>2023-02-18</lastmod>
+    <lastmod>2023-02-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -147,112 +156,126 @@
   
   <url>
     <loc>https://rickg.cn/tags/arma3/</loc>
-    <lastmod>2023-02-18</lastmod>
+    <lastmod>2023-02-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://rickg.cn/tags/sqf/</loc>
-    <lastmod>2023-02-18</lastmod>
+    <lastmod>2023-02-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://rickg.cn/tags/bitcomet/</loc>
-    <lastmod>2023-02-18</lastmod>
+    <lastmod>2023-02-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://rickg.cn/tags/cloudreve/</loc>
-    <lastmod>2023-02-18</lastmod>
+    <lastmod>2023-02-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://rickg.cn/tags/Office-E5/</loc>
-    <lastmod>2023-02-18</lastmod>
+    <lastmod>2023-02-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://rickg.cn/tags/Snapdrop/</loc>
-    <lastmod>2023-02-18</lastmod>
+    <lastmod>2023-02-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://rickg.cn/tags/frp/</loc>
-    <lastmod>2023-02-18</lastmod>
+    <lastmod>2023-02-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://rickg.cn/tags/%E6%95%99%E7%A8%8B/</loc>
-    <lastmod>2023-02-18</lastmod>
+    <lastmod>2023-02-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://rickg.cn/tags/nas/</loc>
-    <lastmod>2023-02-18</lastmod>
+    <lastmod>2023-02-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://rickg.cn/tags/pve%EF%BC%8Cdocker/</loc>
-    <lastmod>2023-02-18</lastmod>
+    <lastmod>2023-02-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://rickg.cn/tags/openwrt/</loc>
-    <lastmod>2023-02-18</lastmod>
+    <lastmod>2023-02-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://rickg.cn/tags/powershell/</loc>
-    <lastmod>2023-02-18</lastmod>
+    <lastmod>2023-02-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://rickg.cn/tags/%E7%BE%8E%E5%8C%96/</loc>
-    <lastmod>2023-02-18</lastmod>
+    <lastmod>2023-02-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://rickg.cn/tags/pve/</loc>
-    <lastmod>2023-02-18</lastmod>
+    <lastmod>2023-02-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://rickg.cn/tags/ddns/</loc>
-    <lastmod>2023-02-18</lastmod>
+    <lastmod>2023-02-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://rickg.cn/tags/%E8%BD%AF%E8%B7%AF%E7%94%B1/</loc>
-    <lastmod>2023-02-18</lastmod>
+    <lastmod>2023-02-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://rickg.cn/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</loc>
+    <lastmod>2023-02-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://rickg.cn/tags/Cloudflare/</loc>
+    <lastmod>2023-02-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>

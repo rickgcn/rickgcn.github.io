@@ -20,21 +20,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="theme-color" content="#f8f8f8">
   
-  <title>为比特彗星开放IPv6端口 - Cpl.Kerry</title>
+  <title>使用Cloudflare Zero Trust进行内网穿透 - Cpl.Kerry</title>
 
   
-    <meta name="description" content="12ip6tables -A FORWARD -p tcp --dport [BitComet端口] -j ACCEPTip6tables -A FORWARD -p udp --dport [BitComet端口] -j ACCEPT">
+    <meta name="description" content="介绍Zero Trust是Cloudflare公司推出的一项企业级虚拟网关服务，官方对其介绍如下：  Cloudflare Zero TrustCloudflare Zero Trust是一个安全框架，旨在通过验证和保护所有的网络访问（无论用户或地点）来保护组织免受网络威胁。该框架基于 “不信任任何人 “的原则，这意味着所有访问请求在被批准之前必须经过验证和授权。 Zero Trust “旨在提供">
 <meta property="og:type" content="article">
-<meta property="og:title" content="为比特彗星开放IPv6端口">
-<meta property="og:url" content="https://rickg.cn/2022/08/07/bitcomet-ipv6-green-light/index.html">
+<meta property="og:title" content="使用Cloudflare Zero Trust进行内网穿透">
+<meta property="og:url" content="https://rickg.cn/2023/02/25/tutorial-cloudflare-zero-trust/index.html">
 <meta property="og:site_name" content="Cpl.Kerry">
-<meta property="og:description" content="12ip6tables -A FORWARD -p tcp --dport [BitComet端口] -j ACCEPTip6tables -A FORWARD -p udp --dport [BitComet端口] -j ACCEPT">
+<meta property="og:description" content="介绍Zero Trust是Cloudflare公司推出的一项企业级虚拟网关服务，官方对其介绍如下：  Cloudflare Zero TrustCloudflare Zero Trust是一个安全框架，旨在通过验证和保护所有的网络访问（无论用户或地点）来保护组织免受网络威胁。该框架基于 “不信任任何人 “的原则，这意味着所有访问请求在被批准之前必须经过验证和授权。 Zero Trust “旨在提供">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-08-07T10:09:45.000Z">
-<meta property="article:modified_time" content="2023-02-15T00:48:45.382Z">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/rickgcn/cdn-assets/img/image-20230225191137594.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/rickgcn/cdn-assets/img/image-20230225191410406.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/rickgcn/cdn-assets/img/image-20230225193025132.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/rickgcn/cdn-assets/img/image-20230225192231356.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/rickgcn/cdn-assets/img/image-20230225193655754.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/rickgcn/cdn-assets/img/image-20230225194302124.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/rickgcn/cdn-assets/img/image-20230225194404224.png">
+<meta property="og:image" content="https://gcore.jsdelivr.net/gh/rickgcn/cdn-assets/img/image-20230225194534026.png">
+<meta property="article:published_time" content="2023-02-25T10:47:06.000Z">
+<meta property="article:modified_time" content="2023-02-25T11:52:26.919Z">
 <meta property="article:author" content="Rick">
-<meta property="article:tag" content="bitcomet">
+<meta property="article:tag" content="内网穿透">
+<meta property="article:tag" content="Cloudflare">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gcore.jsdelivr.net/gh/rickgcn/cdn-assets/img/image-20230225191137594.png">
   
   
 
@@ -91,9 +101,7 @@
 <widget class="widget-wrapper search"><div class="widget-body"><div class="search-wrapper" id="search"><form class="search-form"><input type="text" class="search-input" id="search-input" data-filter="/blog/" placeholder="文章搜索"><svg t="1670596976048" class="icon search-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2676" width="200" height="200"><path d="M938.2 832.6L723.8 618.1c-2.5-2.5-5.3-4.4-7.9-6.4 36.2-55.6 57.3-121.8 57.3-193.1C773.3 222.8 614.6 64 418.7 64S64 222.8 64 418.6c0 195.9 158.8 354.6 354.6 354.6 71.3 0 137.5-21.2 193.2-57.4 2 2.7 3.9 5.4 6.3 7.8L832.5 938c14.6 14.6 33.7 21.9 52.8 21.9 19.1 0 38.2-7.3 52.8-21.8 29.2-29.1 29.2-76.4 0.1-105.5M418.7 661.3C284.9 661.3 176 552.4 176 418.6 176 284.9 284.9 176 418.7 176c133.8 0 242.6 108.9 242.6 242.7 0 133.7-108.9 242.6-242.6 242.6" p-id="2677"></path></svg></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div></div></widget>
 
 
-
-<widget class="widget-wrapper recent"><div class="widget-header cap theme dis-select"><span class="name">最近更新</span><a class="cap-action" id="rss" title="Subscribe" href="/atom.xml"><svg class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="8938"><path d="M800.966 947.251c0-404.522-320.872-732.448-716.69-732.448V62.785c477.972 0 865.44 395.987 865.44 884.466h-148.75z m-162.273 0h-148.74c0-228.98-181.628-414.598-405.678-414.598v-152.01c306.205 0 554.418 253.68 554.418 566.608z m-446.24-221.12c59.748 0 108.189 49.503 108.189 110.557 0 61.063-48.44 110.563-108.188 110.563-59.747 0-108.18-49.5-108.18-110.563 0-61.054 48.433-110.556 108.18-110.556z" p-id="8939"></path></svg></a></div><div class="widget-body related-posts fs14"><a class="item title" href="/2023/02/25/tutorial-cloudflare-zero-trust/"><span class="title">使用Cloudflare Zero Trust进行内网穿透</span></a><a class="item title" href="/2022/05/25/pve-openwrt/"><span class="title">基于pve的Openwrt安装及配置</span></a><a class="item title" href="/2022/06/01/pve-configure-ddns/"><span class="title">记一次给PVE配置ddns</span></a><a class="item title" href="/2022/05/28/powershell-polish/"><span class="title">powershell美化</span></a><a class="item title" href="/2022/08/10/openwrt-config-ipv6-firewall/"><span class="title">设置OpenWrt的防火墙，从外网访问内网服务</span></a></div></widget>
-
+<widget class="widget-wrapper toc single" id="data-toc"><div class="widget-header cap dis-select"><span class="name">使用Cloudflare Zero Trust进行内网穿透</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%8B%E7%BB%8D"><span class="toc-text">介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Cloudflare-Zero-Trust"><span class="toc-text">Cloudflare Zero Trust</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%A0%E9%9C%80%E8%A6%81"><span class="toc-text">你需要</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%AF%E7%94%A8Zero-Trust"><span class="toc-text">启用Zero Trust</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F"><span class="toc-text">配置内网穿透</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E9%9A%A7%E9%81%93"><span class="toc-text">创建隧道</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%89%E8%A3%85connector%EF%BC%88Debian%EF%BC%89"><span class="toc-text">安装connector（Debian）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%89%E8%A3%85connector%EF%BC%88Windows%EF%BC%89"><span class="toc-text">安装connector（Windows）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9B%E8%A1%8C%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F"><span class="toc-text">进行内网穿透</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%99%84%EF%BC%9A%E5%85%B3%E4%BA%8E%E5%AF%B9%E5%86%85%E7%BD%91HTTPS%E6%9C%8D%E5%8A%A1%E7%9A%84%E7%89%B9%E6%AE%8A%E9%85%8D%E7%BD%AE"><span class="toc-text">附：关于对内网HTTPS服务的特殊配置</span></a></li></ol></li></ol></div></div></widget>
 
 
 
@@ -109,18 +117,81 @@
 
 
 
-<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" href="/">文章</a></div><div id="post-meta">发布于&nbsp;<time datetime="2022-08-07T10:09:45.000Z">2022-08-07</time></div></div>
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" href="/">文章</a></div><div id="post-meta">发布于&nbsp;<time datetime="2023-02-25T10:47:06.000Z">2023-02-25</time></div></div>
 
 <article class='md-text content post'>
-<h1 class="article-title"><span>为比特彗星开放IPv6端口</span></h1>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ip6tables -A FORWARD -p tcp --dport [BitComet端口] -j ACCEPT</span><br><span class="line">ip6tables -A FORWARD -p udp --dport [BitComet端口] -j ACCEPT</span><br></pre></td></tr></table></figure>
+<h1 class="article-title"><span>使用Cloudflare Zero Trust进行内网穿透</span></h1>
+<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>Zero Trust是Cloudflare公司推出的一项企业级虚拟网关服务，官方对其介绍如下：</p>
+<blockquote>
+<h3 id="Cloudflare-Zero-Trust"><a href="#Cloudflare-Zero-Trust" class="headerlink" title="Cloudflare Zero Trust"></a>Cloudflare Zero Trust</h3><p>Cloudflare Zero Trust是一个安全框架，旨在通过验证和保护所有的网络访问（无论用户或地点）来保护组织免受网络威胁。该框架基于 “不信任任何人 “的原则，这意味着所有访问请求在被批准之前必须经过验证和授权。</p>
+<p>Zero Trust “旨在提供一种全面的安全方法，涵盖一个组织的网络和基础设施的所有方面。这包括用户认证、设备安全、网络分段和应用安全。</p>
+<p>Zero Trust的主要好处之一是它能够提供细化的访问控制，使企业能够根据用户角色和权限限制对敏感资源的访问。这可以通过最小化攻击面和限制任何潜在漏洞的影响来帮助防止数据泄露和其他安全事件。</p>
+<p>Cloudflare Zero Trust是一项基于云的服务，可以很容易地与组织的现有安全基础设施集成。它的设计具有可扩展性和灵活性，允许企业定制框架，以满足其特定需求和要求。</p>
+<p>（通过<a target="_blank" rel="noopener" href="https://www.deepl.com/">DeepL</a>翻译）</p>
+</blockquote>
+<p>本文我们将使用其中的<code>Tunnel</code>功能，从外网访问家中内网的服务。对于其WARP代理功能，本文不做讨论。</p>
+<h2 id="你需要"><a href="#你需要" class="headerlink" title="你需要"></a>你需要</h2><div class="tag-plugin checkbox" color="green"><input type="checkbox" checked="true"/><span>一个功能正常的Cloudflare账户</span></div>
+
+<div class="tag-plugin checkbox" color="green"><input type="checkbox" checked="true"/><span>一个有效的付款方式（Visa / Mastercard /Paypal）</span></div>
+
+<div class="tag-plugin checkbox" color="green"><input type="checkbox" checked="true"/><span>一个绑定在Cloudflare下的域名</span></div>
+
+<h2 id="启用Zero-Trust"><a href="#启用Zero-Trust" class="headerlink" title="启用Zero Trust"></a>启用Zero Trust</h2><ul>
+<li>访问<a target="_blank" rel="noopener" href="https://one.dash.cloudflare.com/">https://one.dash.cloudflare.com</a></li>
+<li>选择Free计划</li>
+<li>绑定付款方式并填写账单信息</li>
+<li>一切正常的话，你将会看到Zero Trust的控制面板</li>
+</ul>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/rickgcn/cdn-assets/img/image-20230225191137594.png" alt="image-20230225191137594" fancybox="true"/></div><div class="image-meta"><span class="image-caption center">image-20230225191137594</span></div></div>
+
+<h2 id="配置内网穿透"><a href="#配置内网穿透" class="headerlink" title="配置内网穿透"></a>配置内网穿透</h2><h3 id="创建隧道"><a href="#创建隧道" class="headerlink" title="创建隧道"></a>创建隧道</h3><p>点击<code>Access -&gt; Tunnels</code>，点击<code>Create a tunnel</code>创建一个隧道</p>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/rickgcn/cdn-assets/img/image-20230225191410406.png" alt="image-20230225191410406" fancybox="true"/></div><div class="image-meta"><span class="image-caption center">image-20230225191410406</span></div></div>
+
+<p>输入名称后继续，提示安装connector</p>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/rickgcn/cdn-assets/img/image-20230225193025132.png" alt="image-20230225193025132" fancybox="true"/></div><div class="image-meta"><span class="image-caption center">image-20230225193025132</span></div></div>
+
+<p>这里以Debian 64-bit和Windows为例</p>
+<h4 id="安装connector（Debian）"><a href="#安装connector（Debian）" class="headerlink" title="安装connector（Debian）"></a>安装connector（Debian）</h4><p>键入以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -L --output cloudflared.deb https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb &amp;&amp; sudo dpkg -i cloudflared.deb</span><br></pre></td></tr></table></figure>
+
+<p>若访问<code>github.com</code>过慢可在<code>https://</code>前面添加<code>https://ghproxy.com/</code></p>
+<p>而后：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo cloudflared service install [你的Token]</span><br></pre></td></tr></table></figure>
+
+<p>若运行此命令时出错</p>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/rickgcn/cdn-assets/img/image-20230225192231356.png" alt="image-20230225192231356" fancybox="true"/></div><div class="image-meta"><span class="image-caption center">image-20230225192231356</span></div></div>
+
+<p>则执行：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo cloudflared service uninstall</span><br></pre></td></tr></table></figure>
+
+<p>而后重新执行<code>cloudflared service install</code>一行即可</p>
+<h4 id="安装connector（Windows）"><a href="#安装connector（Windows）" class="headerlink" title="安装connector（Windows）"></a>安装connector（Windows）</h4><p>下载<a target="_blank" rel="noopener" href="https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-windows-amd64.msi">https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-windows-amd64.msi</a>并安装</p>
+<p>在<strong>以管理员权限运行的</strong>cmd &#x2F; Powershell中键入：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cloudflare service install [你的<span class="type">Token</span>]</span><br></pre></td></tr></table></figure>
+
+<h3 id="进行内网穿透"><a href="#进行内网穿透" class="headerlink" title="进行内网穿透"></a>进行内网穿透</h3><p>按照如图所示进行配置即可</p>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/rickgcn/cdn-assets/img/image-20230225193655754.png" alt="image-20230225193655754" fancybox="true"/></div><div class="image-meta"><span class="image-caption center">image-20230225193655754</span></div></div>
+
+<p>配置完成后，通过<code>https://[你的子域名].[你的域名]/[你的访问路径(如果有的话)]</code>即可访问内网服务</p>
+<h3 id="附：关于对内网HTTPS服务的特殊配置"><a href="#附：关于对内网HTTPS服务的特殊配置" class="headerlink" title="附：关于对内网HTTPS服务的特殊配置"></a>附：关于对内网HTTPS服务的特殊配置</h3><p>由于内网https服务证书一般为未受信任证书，若直接绑定到域名，访问时会提示<code>Bad Gateway</code>，因此需要对穿透的HTTPS做一些配置</p>
+<p>打开<code>Tunnels</code>，点击隧道旁的<code>Configure</code>进入配置界面，选择<code>Public Hostname</code></p>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/rickgcn/cdn-assets/img/image-20230225194302124.png" alt="image-20230225194302124" fancybox="true"/></div><div class="image-meta"><span class="image-caption center">image-20230225194302124</span></div></div>
+
+<p>选择你要修改的域名，点击<code>Edit</code></p>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/rickgcn/cdn-assets/img/image-20230225194404224.png" alt="image-20230225194404224" fancybox="true"/></div><div class="image-meta"><span class="image-caption center">image-20230225194404224</span></div></div>
+
+<p>选择<code>Additional application settings -&gt; TLS</code>，将<code>No TLS Verify</code>一项启用</p>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/rickgcn/cdn-assets/img/image-20230225194534026.png" alt="image-20230225194534026" fancybox="true"/></div><div class="image-meta"><span class="image-caption center">image-20230225194534026</span></div></div>
+
+<p>保存后即可正常访问</p>
+
 
 <div class="article-footer reveal fs14"><section id="license"><div class="header"><span>许可协议</span></div><div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
 </div></section></div>
 
 </article>
 
-<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/2022/08/10/openwrt-config-ipv6-firewall/">设置OpenWrt的防火墙，从外网访问内网服务</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2022/07/10/configure-e5sub-bot/">E5SubBot的配置使用</a></div></section></div>
+<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2023/02/14/nas-from-entry-to-boom-1/">NAS从入门到Boom① —— 基础环境的配置</a></div></section></div>
 
 
 

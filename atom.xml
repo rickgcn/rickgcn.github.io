@@ -6,7 +6,7 @@
   <link href="https://rickg.cn/atom.xml" rel="self"/>
   
   <link href="https://rickg.cn/"/>
-  <updated>2023-02-18T03:40:25.966Z</updated>
+  <updated>2023-02-25T11:52:26.919Z</updated>
   <id>https://rickg.cn/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用Cloudflare Zero Trust进行内网穿透</title>
+    <link href="https://rickg.cn/2023/02/25/tutorial-cloudflare-zero-trust/"/>
+    <id>https://rickg.cn/2023/02/25/tutorial-cloudflare-zero-trust/</id>
+    <published>2023-02-25T10:47:06.000Z</published>
+    <updated>2023-02-25T11:52:26.919Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>Zero Trust是Cloudflare公司推出的一项企业级虚拟网关服务，官方对其介绍如下：</p><blockquote><h3 id="Cloudflare-Zero-Trust"><a href="#Cloudflare-Zero-Trust" class="headerlink" title="Cloudflare Zero Trust"></a>Cloudflare Zero Trust</h3><p>Cloudflare Zero Trust是一个安全框架，旨在通过验证和保护所有的网络访问（无论用户或地点）来保护组织免受网络威胁。该框架基于 “不信任任何人 “的原则，这意味着所有访问请求在被批准之前必须经过验证和授权。</p><p>Zero Trust “旨在提供一种全面的安全方法，涵盖一个组织的网络和基础设施的所有方面。这包括用户认证、设备安全、网络分段和应用安全。</p><p>Zero Trust的主要好处之一是它能够提供细化的访问控制，使企业能够根据用户角色和权限限制对敏感资源的访问。这可以通过最小化攻击面和限制任何潜在漏洞的影响来帮助防止数据泄露和其他安全事件。</p><p>Cloudflare Zero Trust是一项基于云的服务，可以很容易地与组织的现有安全基础设施集成。它的设计具有可扩展性和灵活性，允许企业定制框架，以满足其特定需求和要求。</p><p>（通过<a href="https://www.deepl.com/">DeepL</a>翻译）</p></blockquote><p>本文我们将使用其中的<code>Tunnel</code>功能，从外网访问家中内网的服务。对于其WARP代理功能，本文不做讨论。</p><h2 id="你需要"><a href="#你需要" class="headerlink" title="你需要"></a>你需要</h2><div class="tag-plugin checkbox" color="green"><input type="checkbox" checked="true"/><span>一个功能正常的Cloudflare账户</span></div><div class="tag-plugin checkbox" color="green"><input type="checkbox" checked="true"/><span>一个有效的付款方式（Visa / Mastercard /Paypal）</span></div><div class="tag-plugin checkbox" color="green"><input type="checkbox" checked="true"/><span>一个绑定在Cloudflare下的域名</span></div><h2 id="启用Zero-Trust"><a href="#启用Zero-Trust" class="headerlink" title="启用Zero Trust"></a>启用Zero Trust</h2><ul><li>访问<a href="https://one.dash.cloudflare.com/">https://one.dash.cloudflare.com</a></li><li>选择Free计划</li><li>绑定付款方式并填写账单信息</li><li>一切正常的话，你将会看到Zero Trust的控制面板</li></ul><div class="tag-plugin image"><div class="image-bg"><img src="https://gcore.jsdelivr.net/gh/rickgcn/cdn-assets/img/image-20230225191137594.png" alt="image-20230225191137594" fancybox="true"/></div><div class="image-meta"><span class="image-caption center">image-20230225191137594</span></div></div><h2 id="配置内网穿透"><a href="#配置内网穿透" class="headerlink" title="配置内网穿透"></a>配置内网穿透</h2><h3 id="创建隧道"><a href="#创建隧道" class="headerlink" title="创建隧道"></a>创建隧道</h3><p>点击<code>Access -&gt; Tunnels</code>，点击<code>Create a tunnel</code>创建一个隧道</p><div class="tag-plugin image"><div class="image-bg"><img src="https://gcore.jsdelivr.net/gh/rickgcn/cdn-assets/img/image-20230225191410406.png" alt="image-20230225191410406" fancybox="true"/></div><div class="image-meta"><span class="image-caption center">image-20230225191410406</span></div></div><p>输入名称后继续，提示安装connector</p><div class="tag-plugin image"><div class="image-bg"><img src="https://gcore.jsdelivr.net/gh/rickgcn/cdn-assets/img/image-20230225193025132.png" alt="image-20230225193025132" fancybox="true"/></div><div class="image-meta"><span class="image-caption center">image-20230225193025132</span></div></div><p>这里以Debian 64-bit和Windows为例</p><h4 id="安装connector（Debian）"><a href="#安装connector（Debian）" class="headerlink" title="安装connector（Debian）"></a>安装connector（Debian）</h4><p>键入以下命令：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -L --output cloudflared.deb https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb &amp;&amp; sudo dpkg -i cloudflared.deb</span><br></pre></td></tr></table></figure><p>若访问<code>github.com</code>过慢可在<code>https://</code>前面添加<code>https://ghproxy.com/</code></p><p>而后：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo cloudflared service install [你的Token]</span><br></pre></td></tr></table></figure><p>若运行此命令时出错</p><div class="tag-plugin image"><div class="image-bg"><img src="https://gcore.jsdelivr.net/gh/rickgcn/cdn-assets/img/image-20230225192231356.png" alt="image-20230225192231356" fancybox="true"/></div><div class="image-meta"><span class="image-caption center">image-20230225192231356</span></div></div><p>则执行：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo cloudflared service uninstall</span><br></pre></td></tr></table></figure><p>而后重新执行<code>cloudflared service install</code>一行即可</p><h4 id="安装connector（Windows）"><a href="#安装connector（Windows）" class="headerlink" title="安装connector（Windows）"></a>安装connector（Windows）</h4><p>下载<a href="https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-windows-amd64.msi">https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-windows-amd64.msi</a>并安装</p><p>在<strong>以管理员权限运行的</strong>cmd &#x2F; Powershell中键入：</p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cloudflare service install [你的<span class="type">Token</span>]</span><br></pre></td></tr></table></figure><h3 id="进行内网穿透"><a href="#进行内网穿透" class="headerlink" title="进行内网穿透"></a>进行内网穿透</h3><p>按照如图所示进行配置即可</p><div class="tag-plugin image"><div class="image-bg"><img src="https://gcore.jsdelivr.net/gh/rickgcn/cdn-assets/img/image-20230225193655754.png" alt="image-20230225193655754" fancybox="true"/></div><div class="image-meta"><span class="image-caption center">image-20230225193655754</span></div></div><p>配置完成后，通过<code>https://[你的子域名].[你的域名]/[你的访问路径(如果有的话)]</code>即可访问内网服务</p><h3 id="附：关于对内网HTTPS服务的特殊配置"><a href="#附：关于对内网HTTPS服务的特殊配置" class="headerlink" title="附：关于对内网HTTPS服务的特殊配置"></a>附：关于对内网HTTPS服务的特殊配置</h3><p>由于内网https服务证书一般为未受信任证书，若直接绑定到域名，访问时会提示<code>Bad Gateway</code>，因此需要对穿透的HTTPS做一些配置</p><p>打开<code>Tunnels</code>，点击隧道旁的<code>Configure</code>进入配置界面，选择<code>Public Hostname</code></p><div class="tag-plugin image"><div class="image-bg"><img src="https://gcore.jsdelivr.net/gh/rickgcn/cdn-assets/img/image-20230225194302124.png" alt="image-20230225194302124" fancybox="true"/></div><div class="image-meta"><span class="image-caption center">image-20230225194302124</span></div></div><p>选择你要修改的域名，点击<code>Edit</code></p><div class="tag-plugin image"><div class="image-bg"><img src="https://gcore.jsdelivr.net/gh/rickgcn/cdn-assets/img/image-20230225194404224.png" alt="image-20230225194404224" fancybox="true"/></div><div class="image-meta"><span class="image-caption center">image-20230225194404224</span></div></div><p>选择<code>Additional application settings -&gt; TLS</code>，将<code>No TLS Verify</code>一项启用</p><div class="tag-plugin image"><div class="image-bg"><img src="https://gcore.jsdelivr.net/gh/rickgcn/cdn-assets/img/image-20230225194534026.png" alt="image-20230225194534026" fancybox="true"/></div><div class="image-meta"><span class="image-caption center">image-20230225194534026</span></div></div><p>保存后即可正常访问</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h2&gt;&lt;p&gt;Zero Trust是Cloudflare公司推出的一项企业级虚拟网关服务，官方对其介绍如下：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;h3 i</summary>
+      
+    
+    
+    
+    
+    <category term="内网穿透" scheme="https://rickg.cn/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/"/>
+    
+    <category term="Cloudflare" scheme="https://rickg.cn/tags/Cloudflare/"/>
+    
+  </entry>
   
   <entry>
     <title>NAS从入门到Boom① —— 基础环境的配置</title>
