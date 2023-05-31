@@ -1,3 +1,5 @@
+https://rickg.cn/2023/05/31/iptables-one-wire-one-net/
+https://rickg.cn/2023/02/14/nas-from-entry-to-boom-1/
 https://rickg.cn/2023/02/27/nas-from-entry-to-boom-2/
 https://rickg.cn/2023/02/25/tutorial-cloudflare-zero-trust/
 https://rickg.cn/notes/index.html
@@ -6,7 +8,6 @@ https://rickg.cn/2022/05/25/pve-openwrt/
 https://rickg.cn/2022/06/01/pve-configure-ddns/
 https://rickg.cn/2022/05/28/powershell-polish/
 https://rickg.cn/2022/08/10/openwrt-config-ipv6-firewall/
-https://rickg.cn/2023/02/14/nas-from-entry-to-boom-1/
 https://rickg.cn/2022/05/28/deploy-snapdrop/
 https://rickg.cn/2022/07/10/configure-e5sub-bot/
 https://rickg.cn/2022/05/29/cloudreve/
@@ -25,7 +26,6 @@ https://rickg.cn/tags/Snapdrop/
 https://rickg.cn/tags/frp/
 https://rickg.cn/tags/%E6%95%99%E7%A8%8B/
 https://rickg.cn/tags/nas/
-https://rickg.cn/tags/pve%EF%BC%8Cdocker/
 https://rickg.cn/tags/openwrt/
 https://rickg.cn/tags/powershell/
 https://rickg.cn/tags/%E7%BE%8E%E5%8C%96/
@@ -35,3 +35,6 @@ https://rickg.cn/tags/%E8%BD%AF%E8%B7%AF%E7%94%B1/
 https://rickg.cn/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/
 https://rickg.cn/tags/Cloudflare/
 https://rickg.cn/tags/jellyfin/
+https://rickg.cn/tags/iptables/
+https://rickg.cn/tags/%E7%BD%91%E7%BB%9C/
+https://rickg.cn/tags/docker/
