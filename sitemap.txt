@@ -1,3 +1,4 @@
+https://rickg.cn/2023/06/02/wireguard-lan-fusion-with-ipv6-tunnel/
 https://rickg.cn/2023/05/31/iptables-one-wire-one-net/
 https://rickg.cn/2023/02/14/nas-from-entry-to-boom-1/
 https://rickg.cn/2023/02/27/nas-from-entry-to-boom-2/
@@ -38,3 +39,6 @@ https://rickg.cn/tags/jellyfin/
 https://rickg.cn/tags/iptables/
 https://rickg.cn/tags/%E7%BD%91%E7%BB%9C/
 https://rickg.cn/tags/docker/
+https://rickg.cn/tags/Wireguard/
+https://rickg.cn/tags/%E5%BC%82%E5%9C%B0%E7%BB%84%E7%BD%91/
+https://rickg.cn/tags/IPv6/
