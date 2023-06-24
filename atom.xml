@@ -6,7 +6,7 @@
   <link href="https://rickg.cn/atom.xml" rel="self"/>
   
   <link href="https://rickg.cn/"/>
-  <updated>2023-06-13T00:56:52.404Z</updated>
+  <updated>2023-06-24T14:23:34.298Z</updated>
   <id>https://rickg.cn/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Intel 82599网卡不认光模块的解决方案</title>
+    <link href="https://rickg.cn/2023/06/24/solution-for-sfp-modules-not-supported-by-ixgbe/"/>
+    <id>https://rickg.cn/2023/06/24/solution-for-sfp-modules-not-supported-by-ixgbe/</id>
+    <published>2023-06-24T14:05:27.000Z</published>
+    <updated>2023-06-24T14:23:34.298Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>最近购买了一台RH1288H V3，想与R720之间构建万兆内网，于是弄了两个Huawei光模块，上机后发现R720找不到光模块所在网口，但是lspci可以看到网卡设备：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">root@pve-r720:~<span class="comment"># lspci | grep 82599</span></span><br><span class="line">01:00.0 Ethernet controller: Intel Corporation 82599ES 10-Gigabit SFI/SFP+ Network Connection (rev 01)</span><br><span class="line">01:00.1 Ethernet controller: Intel Corporation 82599ES 10-Gigabit SFI/SFP+ Network Connection (rev 01)</span><br></pre></td></tr></table></figure><p>执行<code>dmesg ｜ grep ixgbe</code>以后发现有不支持的模块报错</p><p>原因在于ixgbe驱动默认情况下仅支持Intel原厂光模块，使用第三方光模块会导致网卡驱动加载失败，插上模块时网络接口消失</p><h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><h3 id="临时"><a href="#临时" class="headerlink" title="临时"></a>临时</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 卸载ixgbe驱动</span></span><br><span class="line">root@pve-r720:~<span class="comment"># rmmod ixgbe</span></span><br><span class="line"><span class="comment"># 以支持第三方模块模式重新加载ixgbe驱动</span></span><br><span class="line">root@pve-r720:~<span class="comment"># modprobe ixgbe allow_unsupported_sfp=1</span></span><br></pre></td></tr></table></figure><h3 id="一劳永逸"><a href="#一劳永逸" class="headerlink" title="一劳永逸"></a>一劳永逸</h3><p>编辑grub配置文件<code>/etc/default/grub</code>，在GRUB_CMDLINE_LINUX项增加<code>ixgbe.allow_unsupported_sfp=1</code>：</p><div class="tag-plugin image"><div class="image-bg"><img src="https://gcore.jsdelivr.net/gh/rickgcn/cdn-assets/img/%E6%88%AA%E5%B1%8F2023-06-24%2022.21.18.png" alt="截屏2023-06-24 22.21.18" fancybox="true"/></div><div class="image-meta"><span class="image-caption center">截屏2023-06-24 22.21.18</span></div></div><p>更新grub：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@pve-r720:~<span class="comment"># update-grub2</span></span><br></pre></td></tr></table></figure><p>重启后生效</p><p><strong>祝搞机愉快！</strong></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;问题&quot;&gt;&lt;a href=&quot;#问题&quot; class=&quot;headerlink&quot; title=&quot;问题&quot;&gt;&lt;/a&gt;问题&lt;/h2&gt;&lt;p&gt;最近购买了一台RH1288H V3，想与R720之间构建万兆内网，于是弄了两个Huawei光模块，上机后发现R720找不到光模块所在网口，但</summary>
+      
+    
+    
+    
+    
+    <category term="intel" scheme="https://rickg.cn/tags/intel/"/>
+    
+    <category term="82599" scheme="https://rickg.cn/tags/82599/"/>
+    
+    <category term="10Gb" scheme="https://rickg.cn/tags/10Gb/"/>
+    
+  </entry>
   
   <entry>
     <title>使用Wireguard实现异地组网并构建IPv6隧道</title>
