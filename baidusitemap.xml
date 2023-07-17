@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://rickg.cn/2023/07/17/pve-cloud-desktop-hands-on-1/</loc>
+    <lastmod>2023-07-17</lastmod>
+  </url>
+  <url>
     <loc>https://rickg.cn/2023/06/24/solution-for-sfp-modules-not-supported-by-ixgbe/</loc>
     <lastmod>2023-06-24</lastmod>
   </url>
