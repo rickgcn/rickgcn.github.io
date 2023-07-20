@@ -1,4 +1,4 @@
-https://rickg.cn/2023/07/18/pve-cloud-desktop-hands-on-2/
+https://rickg.cn/2023/07/20/pve-cloud-desktop-hands-on-2/
 https://rickg.cn/2023/07/17/pve-cloud-desktop-hands-on-1/
 https://rickg.cn/2023/06/24/solution-for-sfp-modules-not-supported-by-ixgbe/
 https://rickg.cn/2023/06/02/wireguard-lan-fusion-with-ipv6-tunnel/
