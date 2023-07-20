@@ -59,7 +59,7 @@
 <meta property="og:image" content="https://gcore.jsdelivr.net/gh/rickgcn/cdn-assets/img/%E6%88%AA%E5%B1%8F2023-07-20%2014.04.02.png">
 <meta property="og:image" content="https://gcore.jsdelivr.net/gh/rickgcn/cdn-assets/img/%E6%88%AA%E5%B1%8F2023-07-20%2014.06.28.png">
 <meta property="article:published_time" content="2023-07-20T06:12:39.000Z">
-<meta property="article:modified_time" content="2023-07-20T06:14:42.986Z">
+<meta property="article:modified_time" content="2023-07-20T10:07:08.668Z">
 <meta property="article:author" content="Rick">
 <meta property="article:tag" content="云桌面">
 <meta property="article:tag" content="PVE">
@@ -122,7 +122,7 @@
 <widget class="widget-wrapper search"><div class="widget-body"><div class="search-wrapper" id="search"><form class="search-form"><input type="text" class="search-input" id="search-input" data-filter="/blog/" placeholder="文章搜索"><svg t="1670596976048" class="icon search-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2676" width="200" height="200"><path d="M938.2 832.6L723.8 618.1c-2.5-2.5-5.3-4.4-7.9-6.4 36.2-55.6 57.3-121.8 57.3-193.1C773.3 222.8 614.6 64 418.7 64S64 222.8 64 418.6c0 195.9 158.8 354.6 354.6 354.6 71.3 0 137.5-21.2 193.2-57.4 2 2.7 3.9 5.4 6.3 7.8L832.5 938c14.6 14.6 33.7 21.9 52.8 21.9 19.1 0 38.2-7.3 52.8-21.8 29.2-29.1 29.2-76.4 0.1-105.5M418.7 661.3C284.9 661.3 176 552.4 176 418.6 176 284.9 284.9 176 418.7 176c133.8 0 242.6 108.9 242.6 242.7 0 133.7-108.9 242.6-242.6 242.6" p-id="2677"></path></svg></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div></div></widget>
 
 
-<widget class="widget-wrapper toc single" id="data-toc"><div class="widget-header cap dis-select"><span class="name">Proxmox VE 云桌面实战 ② - Windows篇</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%B9%E6%A1%88"><span class="toc-text">方案</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#SPICE"><span class="toc-text">SPICE</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#VNC"><span class="toc-text">VNC</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%B2%E6%B5%81"><span class="toc-text">串流</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%99%9A%E6%8B%9F%E6%9C%BA%E9%85%8D%E7%BD%AE"><span class="toc-text">虚拟机配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AESPICE"><span class="toc-text">配置SPICE</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AEVNC"><span class="toc-text">配置VNC</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AEParsec"><span class="toc-text">配置Parsec</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-text">安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B3%BB%E7%BB%9F%E8%A6%81%E6%B1%82"><span class="toc-text">系统要求</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%A2%E6%88%B7%E7%AB%AF"><span class="toc-text">客户端</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E7%AB%AF"><span class="toc-text">服务端</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AEvGPU%E6%8E%88%E6%9D%83"><span class="toc-text">配置vGPU授权</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%82%E6%95%B0%E9%85%8D%E7%BD%AE"><span class="toc-text">参数配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E7%AB%AF-1"><span class="toc-text">服务端</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%A2%E6%88%B7%E7%AB%AF-1"><span class="toc-text">客户端</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#800%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95"><span class="toc-text">-800错误解决办法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AESunshine"><span class="toc-text">配置Sunshine</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%8B%E7%BB%8D"><span class="toc-text">介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%98%E6%96%B9%E9%85%8D%E7%BD%AE%E8%A6%81%E6%B1%82"><span class="toc-text">官方配置要求</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%80%E4%BD%8E%E9%85%8D%E7%BD%AE"><span class="toc-text">最低配置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4K%E6%8E%A8%E8%8D%90%E9%85%8D%E7%BD%AE"><span class="toc-text">4K推荐配置</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85-1"><span class="toc-text">安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE"><span class="toc-text">配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#General%E9%A1%B5"><span class="toc-text">General页</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Files%E9%A1%B5"><span class="toc-text">Files页</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Input%E9%A1%B5"><span class="toc-text">Input页</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Audio-x2F-Video%E9%A1%B5"><span class="toc-text">Audio &#x2F; Video页</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Advanced%E9%A1%B5"><span class="toc-text">Advanced页</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9E%E6%8E%A5%E5%88%B0Sunshine"><span class="toc-text">连接到Sunshine</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="toc-text">参考资料</span></a></li></ol></div></div></widget>
+<widget class="widget-wrapper toc single" id="data-toc"><div class="widget-header cap dis-select"><span class="name">Proxmox VE 云桌面实战 ② - Windows篇</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%B9%E6%A1%88"><span class="toc-text">方案</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#SPICE"><span class="toc-text">SPICE</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#VNC"><span class="toc-text">VNC</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%B2%E6%B5%81"><span class="toc-text">串流</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%99%9A%E6%8B%9F%E6%9C%BA%E9%85%8D%E7%BD%AE"><span class="toc-text">虚拟机配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AESPICE"><span class="toc-text">配置SPICE</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AEVNC"><span class="toc-text">配置VNC</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AEParsec"><span class="toc-text">配置Parsec</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-text">安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B3%BB%E7%BB%9F%E8%A6%81%E6%B1%82"><span class="toc-text">系统要求</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%A2%E6%88%B7%E7%AB%AF"><span class="toc-text">客户端</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E7%AB%AF"><span class="toc-text">服务端</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AEvGPU%E6%8E%88%E6%9D%83"><span class="toc-text">配置vGPU授权</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%82%E6%95%B0%E9%85%8D%E7%BD%AE"><span class="toc-text">参数配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E7%AB%AF-1"><span class="toc-text">服务端</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%A2%E6%88%B7%E7%AB%AF-1"><span class="toc-text">客户端</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#800%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95"><span class="toc-text">-800错误解决办法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AESunshine"><span class="toc-text">配置Sunshine</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%8B%E7%BB%8D"><span class="toc-text">介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%98%E6%96%B9%E9%85%8D%E7%BD%AE%E8%A6%81%E6%B1%82"><span class="toc-text">官方配置要求</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%80%E4%BD%8E%E9%85%8D%E7%BD%AE"><span class="toc-text">最低配置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4K%E6%8E%A8%E8%8D%90%E9%85%8D%E7%BD%AE"><span class="toc-text">4K推荐配置</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85-1"><span class="toc-text">安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE"><span class="toc-text">配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#General%E9%A1%B5"><span class="toc-text">General页</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Files%E9%A1%B5"><span class="toc-text">Files页</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Input%E9%A1%B5"><span class="toc-text">Input页</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Audio-x2F-Video%E9%A1%B5"><span class="toc-text">Audio &#x2F; Video页</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Advanced%E9%A1%B5"><span class="toc-text">Advanced页</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91"><span class="toc-text">配置端口转发</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9E%E6%8E%A5%E5%88%B0Sunshine"><span class="toc-text">连接到Sunshine</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="toc-text">参考资料</span></a></li></ol></div></div></widget>
 
 
 
@@ -701,6 +701,43 @@
 <td>监听的外部IP，留空为自动检测</td>
 </tr>
 </tbody></table>
+<h3 id="配置端口转发"><a href="#配置端口转发" class="headerlink" title="配置端口转发"></a>配置端口转发</h3><p>在路由器 &#x2F; FRP上转发以下端口</p>
+<table>
+<thead>
+<tr>
+<th>端口</th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>47984</td>
+<td>TCP</td>
+</tr>
+<tr>
+<td>47989</td>
+<td>TCP</td>
+</tr>
+<tr>
+<td>47998</td>
+<td>UDP</td>
+</tr>
+<tr>
+<td>47999</td>
+<td>UDP</td>
+</tr>
+<tr>
+<td>48000</td>
+<td>UDP</td>
+</tr>
+<tr>
+<td>48002</td>
+<td>UDP</td>
+</tr>
+<tr>
+<td>48010</td>
+<td>TCP &#x2F; UDP</td>
+</tr>
+</tbody></table>
 <h3 id="连接到Sunshine"><a href="#连接到Sunshine" class="headerlink" title="连接到Sunshine"></a>连接到Sunshine</h3><p>前往Moonlight Github Release页面下载Moonlight客户端</p>
 <div class="tag-plugin link dis-select"><a class="link-card plain" title="" href="https://github.com/moonlight-stream/moonlight-qt/releases" target="_blank" rel="external nofollow noopener noreferrer" cardlink autofill="title,icon"><div class="left"><span class="title">https://github.com/moonlight-stream/moonlight-qt/releases</span><span class="cap link fs12">https://github.com/moonlight-stream/moonlight-qt/releases</span></div><div class="right"><div class="lazy img" data-bg="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/link/8f277b4ee0ecd.svg"></div></div></a></div>
 
@@ -730,7 +767,7 @@
 
 </article>
 
-<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2023/07/17/pve-cloud-desktop-hands-on-1/">Proxmox VE 云桌面实战 ① - 配置NVIDIA vGPU</a></div></section></div>
+<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/2023/07/20/pve-cloud-desktop-hands-on-3/">Proxmox VE 云桌面实战 ③ - 打造属于自己的Linux云电脑 - Fedora篇</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2023/07/17/pve-cloud-desktop-hands-on-1/">Proxmox VE 云桌面实战 ① - 配置NVIDIA vGPU</a></div></section></div>
 
 
 

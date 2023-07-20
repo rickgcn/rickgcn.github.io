@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://rickg.cn/2023/07/20/pve-cloud-desktop-hands-on-3/</loc>
+    
+    <lastmod>2023-07-20</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://rickg.cn/2023/07/20/pve-cloud-desktop-hands-on-2/</loc>
     
     <lastmod>2023-07-20</lastmod>
@@ -420,6 +429,13 @@
   
   <url>
     <loc>https://rickg.cn/tags/Windows/</loc>
+    <lastmod>2023-07-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://rickg.cn/tags/Linux/</loc>
     <lastmod>2023-07-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

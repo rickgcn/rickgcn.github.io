@@ -1,3 +1,4 @@
+https://rickg.cn/2023/07/20/pve-cloud-desktop-hands-on-3/
 https://rickg.cn/2023/07/20/pve-cloud-desktop-hands-on-2/
 https://rickg.cn/2023/07/17/pve-cloud-desktop-hands-on-1/
 https://rickg.cn/2023/06/24/solution-for-sfp-modules-not-supported-by-ixgbe/
@@ -52,3 +53,4 @@ https://rickg.cn/tags/%E4%BA%91%E6%A1%8C%E9%9D%A2/
 https://rickg.cn/tags/PVE/
 https://rickg.cn/tags/vGPU/
 https://rickg.cn/tags/Windows/
+https://rickg.cn/tags/Linux/
