@@ -6,7 +6,7 @@
   <link href="https://rickg.cn/atom.xml" rel="self"/>
   
   <link href="https://rickg.cn/"/>
-  <updated>2024-10-12T00:59:50.431Z</updated>
+  <updated>2023-07-21T02:36:09.106Z</updated>
   <id>https://rickg.cn/</id>
   
   <author>
@@ -15,26 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title></title>
-    <link href="https://rickg.cn/2024/10/12/follow/"/>
-    <id>https://rickg.cn/2024/10/12/follow/</id>
-    <published>2024-10-12T00:59:45.070Z</published>
-    <updated>2024-10-12T00:59:50.431Z</updated>
-    
-    <content type="html"><![CDATA[<p>This message is used to verify that this feed (feedId:58340484760415232) belongs to me (userId:67521871361650688). Join me in enjoying the next generation information browser <a href="https://follow.is/">https://follow.is</a>.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;This message is used to verify that this feed (feedId:58340484760415232) belongs to me (userId:67521871361650688). Join me in enjoying th</summary>
-      
-    
-    
-    
-    
-  </entry>
   
   <entry>
     <title>Proxmox VE 云桌面实战 ④ - 打造属于自己的Linux云电脑 - Ubuntu篇</title>
@@ -499,6 +479,30 @@
     
     
     <category term="Snapdrop" scheme="https://rickg.cn/tags/Snapdrop/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>powershell美化</title>
+    <link href="https://rickg.cn/2022/05/28/powershell-polish/"/>
+    <id>https://rickg.cn/2022/05/28/powershell-polish/</id>
+    <published>2022-05-28T05:20:40.000Z</published>
+    <updated>2023-02-18T03:40:30.866Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h2><div class="tag-plugin image"><div class="image-bg"><img src="https://gcore.jsdelivr.net/gh/rickgcn/cdn-assets/img/image-20220528135813783.png" alt="image-20220528135813783" fancybox="true"/></div><div class="image-meta"><span class="image-caption center">image-20220528135813783</span></div></div><h2 id="安装oh-my-posh"><a href="#安装oh-my-posh" class="headerlink" title="安装oh-my-posh"></a>安装oh-my-posh</h2><p>在Microsoft Store安装Windows Terminal</p><p>执行如下命令</p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Set-ExecutionPolicy</span> Bypass</span><br><span class="line"><span class="built_in">Install-Module</span> <span class="built_in">oh</span><span class="literal">-my-posh</span> <span class="literal">-Scope</span> CurrentUser</span><br><span class="line"><span class="built_in">Install-Module</span> posh<span class="literal">-git</span> <span class="literal">-Scope</span> CurrentUser</span><br></pre></td></tr></table></figure><p>如有提示按y即可</p><h2 id="启用oh-my-posh"><a href="#启用oh-my-posh" class="headerlink" title="启用oh-my-posh"></a>启用oh-my-posh</h2><p>配置PowerShell启动脚本</p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">notepad <span class="variable">$PROFILE</span></span><br></pre></td></tr></table></figure><p>导入相应模块</p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Import-Module</span> <span class="built_in">oh</span><span class="literal">-my-posh</span></span><br><span class="line"><span class="built_in">Import-Module</span> posh<span class="literal">-git</span></span><br></pre></td></tr></table></figure><p>设置主题为agnosterplus</p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Set-PoshPrompt</span> <span class="literal">-Theme</span> agnosterplus</span><br></pre></td></tr></table></figure><h2 id="解决字体乱码"><a href="#解决字体乱码" class="headerlink" title="解决字体乱码"></a>解决字体乱码</h2><blockquote><p>参见 <a href="https://ohmyposh.dev/docs/fonts">Oh My Posh Docs</a></p></blockquote><p>下载Nerd Fonts，这里我选择的是Meslo Fonts</p><div class="tag-plugin link dis-select"><a class="link-card plain" title="下载地址" href="https://www.nerdfonts.com/font-downloads" target="_blank" rel="external nofollow noopener noreferrer" cardlink autofill="icon"><div class="left"><span class="title">下载地址</span><span class="cap link fs12">https://www.nerdfonts.com/font-downloads</span></div><div class="right"><div class="lazy img" data-bg="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/link/8f277b4ee0ecd.svg"></div></div></a></div><p>解压，选择<code>Meslo LG S Regular Nerd Font Complete Windows Compatible.ttf</code>并安装</p><p>打开Windows Terminal，按<code>Ctrl + ,</code> 打开设置，点击<code>Windows Powershell</code> –&gt; <code>外观</code>，将字体改为刚才安装的<code>MesloLGS NF</code>，如图所示</p><div class="tag-plugin image"><div class="image-bg"><img src="https://gcore.jsdelivr.net/gh/rickgcn/cdn-assets/img/image-20220528135059127.png" alt="image-20220528135059127" fancybox="true"/></div><div class="image-meta"><span class="image-caption center">image-20220528135059127</span></div></div><h2 id="启用模糊背景"><a href="#启用模糊背景" class="headerlink" title="启用模糊背景"></a>启用模糊背景</h2><p><code>设置</code> –&gt; <code>Windows Powershell</code> –&gt; <code>外观</code> –&gt; <code>透明度</code></p><p>启用 <code>Enable acrylic</code> 项</p><div class="tag-plugin image"><div class="image-bg"><img src="https://gcore.jsdelivr.net/gh/rickgcn/cdn-assets/img/image-20220528135302118.png" alt="image-20220528135302118" fancybox="true"/></div><div class="image-meta"><span class="image-caption center">image-20220528135302118</span></div></div><h2 id="允许PowerShell执行任意脚本"><a href="#允许PowerShell执行任意脚本" class="headerlink" title="允许PowerShell执行任意脚本"></a>允许PowerShell执行任意脚本</h2><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Set-ExecutionPolicy</span> Unrestricted</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;效果图&quot;&gt;&lt;a href=&quot;#效果图&quot; class=&quot;headerlink&quot; title=&quot;效果图&quot;&gt;&lt;/a&gt;效果图&lt;/h2&gt;&lt;div class=&quot;tag-plugin image&quot;&gt;&lt;div class=&quot;image-bg&quot;&gt;&lt;img src=&quot;https:/</summary>
+      
+    
+    
+    
+    
+    <category term="powershell" scheme="https://rickg.cn/tags/powershell/"/>
+    
+    <category term="美化" scheme="https://rickg.cn/tags/%E7%BE%8E%E5%8C%96/"/>
     
   </entry>
   
